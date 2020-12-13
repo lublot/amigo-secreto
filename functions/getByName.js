@@ -1,6 +1,6 @@
 const mongo = require('mongodb').MongoClient;
 
-exports.handler = async function (event, context) {
+exports.handler = async function (event) {
   try {
     const client = await mongo.connect(process.env.DB_CONNECTION_STRING, {
       useUnifiedTopology: true,
