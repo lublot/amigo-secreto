@@ -17,6 +17,10 @@ exports.handler = async function(event) {
     const profile = db.collection('profiles');
     const requesterEmail = event.queryStringParameters.email;
 
+    const isAuth = await profile.findOne({ email: requesterEmail, hashCode: event.queryStringParameters.hashCode })
+    if (!isAuth) {
+      return { statusCode: 401, body: JSON.stringify({ message: "Não nasci ontem não..." }) }
+    }
     const result = await profile
       .aggregate(
         {

@@ -62,6 +62,7 @@ export default {
           );
           const { isCorrect } = await response.json();
           if (isCorrect) {
+            this.setHashCode(this.code)
             this.setLogged();
             if (this.guest.loggedIn) {
               this.nextScene();
@@ -82,6 +83,7 @@ export default {
       nextScene: "nextScene",
       setGuest: "setGuestPerson",
       setLogged: "setLogged",
+      setHashCode: "setHashCode"
     }),
   },
 };

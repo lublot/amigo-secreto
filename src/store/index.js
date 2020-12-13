@@ -39,6 +39,9 @@ const store = new Vuex.Store({
     },
     setLogged (state) {
       state.guestPerson.loggedIn = true
+    },
+    setHashCode (state, hashCode) {
+      state.guestPerson.hashCode = hashCode
     }
   },
   actions: {
@@ -50,6 +53,9 @@ const store = new Vuex.Store({
     },
     setLogged ({ commit }) {
       commit('setLogged')
+    },
+    setHashCode ({ commit }, hashCode) {
+      commit('setHashCode', hashCode)
     }
   },
   getters: {

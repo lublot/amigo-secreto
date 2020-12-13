@@ -42,7 +42,7 @@ export default {
   },
   mounted () {
     const vm = this;
-    fetch(`/api/getAFriend?email=${this.guest.email}`)
+    fetch(`/api/getAFriend?email=${this.guest.email}&hashCode=${this.guest.hashCode}`)
       .then(async (result) => {
         vm.picked = true;
         const { data } = await result.json()
