@@ -1,4 +1,12 @@
-# uefs
+# Sistema de Amigo Secreto do Grupo de Marcar Rolê
+
+### Descrição
+
+Sistema para realizar o sorteio dos pares no amigo secreto do grupo.
+Possui autenticação baseada no e-mail dos usuários.
+
+### Stack
+- Vue + Netlify Functions + MongoDB
 
 ## Project setup
 ```

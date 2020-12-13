@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply rounded px-3 py-2 text-lg text-black focus:outline-none;
+  @apply border-2 border-solid border-gray-600 hover:border-blue-600 focus:border-blue-600;
+}
+
+.button {
+  @apply text-lg mt-2;
+  @apply py-2 px-4 bg-green-500 text-black font-semibold rounded;
+  @apply hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75;
+}
+
+.form-container {
+  @apply flex flex-col justify-center;
+  @apply lg:col-span-4 lg:col-start-2 md:col-span-5 md:col-start-2;
+  @apply gap-2 order-2 md:order-none m-3 md:m-0 pb-14 md:pb-0;
+}
+
+.illustration-container {
+  @apply flex flex-col md:min-h-screen;
+  @apply lg:col-start-8 lg:col-span-6 md:col-start-8 md:col-span-5;
+  @apply gap-2 order-1 md:order-none;
+}
+
+.secret-container {
+  @apply flex flex-col md:min-h-screen;
+  @apply lg:col-span-6 lg:col-start-1 md:col-span-6 md:col-start-1;
+  @apply gap-2 order-2 md:order-none py-8;
+}
+
+.friend-container {
+  @apply flex flex-col md:min-h-screen;
+  @apply lg:col-start-7 lg:col-span-6 md:col-start-7 md:col-span-6;
+  @apply gap-2 order-1 md:order-none py-8;
+}
