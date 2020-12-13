@@ -2,7 +2,7 @@ const mongo = require('mongodb').MongoClient;
 
 exports.handler = async function (event) {
   try {
-    const client = mongo.connect(process.env.DB_CONNECTION_STRING, { 
+    const client = await mongo.connect(process.env.DB_CONNECTION_STRING, { 
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
