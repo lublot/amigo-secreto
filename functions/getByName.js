@@ -18,6 +18,7 @@ exports.handler = function (event, context, callback) {
         if (err) {
           callback(null, { statusCode: 500, body: JSON.stringify({ success: false }) });
         }
+        console.log(result)
         callback(null, { statusCode: 200, body: JSON.stringify({ data: result }) });
     })
   }).catch(() => {
