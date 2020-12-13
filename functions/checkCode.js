@@ -14,6 +14,7 @@ exports.handler = async function (event) {
     })
     return { statusCode: 200, body: JSON.stringify({ isCorrect: count > 0 }) }
   } catch (error) {
+    console.log(error)
     return { statusCode: 500, body: JSON.stringify({ success: false }) }
   }
 }
